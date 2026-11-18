@@ -4,6 +4,8 @@
 
 > **Key finding:** 95% of AI-generated ICD-10-CM codes were *valid* (they exist in the official code set), but a manual clinical audit found only about **63% were fully correct** for the patient. Automated checks alone overstate AI accuracy.
 
+![Power BI dashboard of results](dashboard.png)
+
 ---
 
 ## Results at a glance
@@ -108,7 +110,7 @@ Each code that was not fully correct was assigned an error type:
 
 ## Next steps
 
-- [ ] Power BI dashboard of results *(in progress)*
+- [x] Power BI dashboard of results
 - [ ] Add the outpatient uncertain-diagnosis rule and visit type to the prompt, then re-test
 - [ ] Repeat runs to measure run-to-run variability
 
@@ -129,6 +131,8 @@ Each code that was not fully correct was assigned an error type:
 | `make_review_sheet.py`, `add_error_types.py` | Builds the blinded Excel audit sheet |
 | `review_results.py` | Analyses audit ratings → `review_results.csv` |
 | `icd10cm_codes_2027.txt` | Official CMS FY2027 ICD-10-CM codes |
+| `genai_medical_coding_dashboard.pbix` | Power BI dashboard with DAX measures |
+| `dashboard.png` | Dashboard screenshot |
 
 ---
 
@@ -148,7 +152,7 @@ Each code that was not fully correct was assigned an error type:
 
 ## Tools
 
-Python (pandas, openpyxl) · Anthropic Claude API · Git/GitHub · Excel
+Python (pandas, openpyxl) · Anthropic Claude API · Power BI (DAX) · Git/GitHub · Excel
 
 ---
 
